@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Repositories\TelegramIntegrationRepository;
+use App\Repositories\TelegramIntegrationRepositoryInterface;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -11,7 +13,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->bind(
+        TelegramIntegrationRepositoryInterface::class,
+        TelegramIntegrationRepository::class,
+    );
+        
     }
 
     /**
