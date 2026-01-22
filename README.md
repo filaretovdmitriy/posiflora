@@ -8,8 +8,7 @@ php artisan serve --host=0.0.0.0 --port=8000
 
 ## Запуск фронта
 
-cd frontend/
-npm run dev
+docker compose up frontend
 
 # Генерация данных для теста
 
