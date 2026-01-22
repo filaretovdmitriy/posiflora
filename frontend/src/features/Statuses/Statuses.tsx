@@ -1,12 +1,12 @@
 
-import { useGetAlbumsFromServerQuery } from "./model/queries";
+import { useGetTelegramStatusFromServerQuery } from "./model/queries";
 
 interface IStatusesProps {
     shopId: string
 }
 
 const Statuses = ({shopId}: IStatusesProps) => {
-    const { data, isSuccess } = useGetAlbumsFromServerQuery({shopId});
+    const { data, isSuccess } = useGetTelegramStatusFromServerQuery({shopId});
     return (
         <div>
             <h1>Статусы</h1>
