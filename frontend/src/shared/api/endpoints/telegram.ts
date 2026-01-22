@@ -27,10 +27,6 @@ interface ITelegramStatusResponse {
     failedCount: string;
 }
 
-
-
-
-
 export const getTelegramStatusFromServer = (
     {shopId}: ITelegramStatusRequestDto,
 ): Promise<ISingleResponse<string>> => {
