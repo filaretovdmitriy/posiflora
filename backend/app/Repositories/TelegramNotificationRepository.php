@@ -7,7 +7,7 @@ use App\Models\Order;
 use App\Models\TelegramIntegration;
 use App\Models\TelegramSendLog;
 
-class TelegramNotificationRepository
+class TelegramNotificationRepository implements TelegramNotificationRepositoryInterface
 {
     /**
      * Create a new class instance.

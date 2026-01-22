@@ -19,7 +19,7 @@ class OrdersController extends Controller
     }
     public function store(OrderRequest $request, int $shopId): JsonResponse
     {
-        $data = $request->validate();
+        $data = $request->validated();
 
         $result = $this->orderService->orderCreate($shopId, OrderCreateData::from($data));
         return (new OrderCreateResource($result))

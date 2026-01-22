@@ -11,7 +11,7 @@ class OrderRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,7 @@ class OrderRequest extends FormRequest
         return [
             "number" => ["required", "string"],
             "total" => ["required", "numeric"],
-            "custoName" => ["required", "string"],
+            "customerName" => ["required", "string"],
         ];
     }
 }

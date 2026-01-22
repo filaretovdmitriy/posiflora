@@ -4,7 +4,7 @@ namespace App\Repositories;
 
 use App\Models\TelegramIntegration;
 
-interface TelegramIntegrationRepositoryInterface
+interface TelegramNotificationRepositoryInterface
 {
     public function upsertForShop(int $shopId, array $data): TelegramIntegration;
 }
