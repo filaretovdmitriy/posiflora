@@ -14,7 +14,7 @@ class TelegramClient
         //
     }
 
-     public function sendMessage(string $botToken, string $chatId, string $text): void
+    public function sendMessage(string $botToken, string $chatId, string $text): void
     {
         Http::post("https://api.telegram.org/bot{$botToken}/sendMessage", [
             'chat_id' => $chatId,
