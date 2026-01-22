@@ -55,7 +55,7 @@ class OrderCreateTelegramTest extends TestCase
             'customer_name' => 'Анна',
         ]);
 
-        $orderId = $response->json('order.id');
+        $orderId = $response->json('data.order.id');
 
         $this->assertDatabaseHas('telegram_send_log', [
             'shop_id' => $shop->id,
