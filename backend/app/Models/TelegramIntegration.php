@@ -8,8 +8,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class TelegramIntegration extends Model
 {
-    use HasFactory; 
-    
+    use HasFactory;
+
     protected $table = 'telegram_integrations';
 
     protected $fillable = [

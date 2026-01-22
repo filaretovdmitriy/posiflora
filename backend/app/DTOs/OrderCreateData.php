@@ -3,6 +3,7 @@
 namespace App\DTOs;
 
 use Spatie\LaravelData\Data;
+
 class OrderCreateData extends Data
 {
     /**
@@ -12,8 +13,7 @@ class OrderCreateData extends Data
         public string $number,
         public float $total,
         public string $customerName
-    )
-    {
+    ) {
         //
     }
 }

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Order extends Model
 {
-    public $timestamps = false; 
+    public $timestamps = false;
 
     protected $fillable = [
         'shop_id',

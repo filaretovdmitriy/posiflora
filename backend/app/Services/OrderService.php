@@ -3,7 +3,6 @@
 namespace App\Services;
 
 use App\DTOs\OrderCreateData;
-use App\Models\Order;
 use App\Models\Shop;
 use App\Repositories\TelegramNotificationRepositoryInterface;
 use Illuminate\Support\Facades\DB;
@@ -12,7 +11,8 @@ class OrderService
 {
     public function __construct(
         private TelegramNotificationRepositoryInterface $telegramNotifications,
-    ) {}
+    ) {
+    }
 
     public function orderCreate(int $shopId, OrderCreateData $data): array
     {

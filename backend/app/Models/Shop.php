@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 class Shop extends Model
 {
     use HasFactory;
-    
+
     protected $fillable = [
         'name',
     ];

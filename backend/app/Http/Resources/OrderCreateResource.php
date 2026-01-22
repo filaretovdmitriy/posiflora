@@ -25,7 +25,7 @@ class OrderCreateResource extends JsonResource
                 'createdAt'    => $order->created_at?->toISOString(),
             ],
             'telegram' => [
-                'status' => $this['status'], 
+                'status' => $this['status'],
             ],
         ];
     }

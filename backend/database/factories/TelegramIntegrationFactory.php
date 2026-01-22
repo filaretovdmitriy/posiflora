@@ -21,7 +21,7 @@ class TelegramIntegrationFactory extends Factory
     public function definition(): array
     {
         return [
-            'shop_id'   => Shop::factory(),       
+            'shop_id'   => Shop::factory(),
             'bot_token' => $this->faker->sha1,
             'chat_id'   => (string) $this->faker->numberBetween(100000, 999999),
             'enabled'   => true,

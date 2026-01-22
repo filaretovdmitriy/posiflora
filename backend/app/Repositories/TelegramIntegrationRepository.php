@@ -3,7 +3,6 @@
 namespace App\Repositories;
 
 use App\Clients\TelegramClient;
-use App\DTOs\TelegramConnectData;
 use App\Models\TelegramIntegration;
 
 class TelegramIntegrationRepository implements TelegramIntegrationRepositoryInterface
@@ -15,7 +14,7 @@ class TelegramIntegrationRepository implements TelegramIntegrationRepositoryInte
     {
         //
     }
-     
+
     public function upsertForShop(int $shopId, array $data): TelegramIntegration
     {
         return TelegramIntegration::updateOrCreate(

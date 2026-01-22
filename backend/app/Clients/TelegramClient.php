@@ -21,5 +21,4 @@ class TelegramClient
             'text'    => $text,
         ]);
     }
-    
 }

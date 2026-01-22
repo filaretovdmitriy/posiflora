@@ -12,12 +12,11 @@ class TelegramNotificationRepository implements TelegramNotificationRepositoryIn
     /**
      * Create a new class instance.
      */
-    public function __construct( private TelegramClient $telegramClient)
+    public function __construct(private TelegramClient $telegramClient)
     {
-        
     }
 
-      public function notifyOrderCreated(Order $order): string
+    public function notifyOrderCreated(Order $order): string
     {
         $shopId = $order->shop_id;
 
@@ -53,7 +52,7 @@ class TelegramNotificationRepository implements TelegramNotificationRepositoryIn
 
         TelegramSendLog::create([
             'shop_id' => $shopId,
-            'order_id'=> $order->id,
+            'order_id' => $order->id,
             'message' => $text,
             'status'  => $status,
             'error'   => $error,

@@ -16,16 +16,14 @@ class AppServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->app->bind(
-        TelegramIntegrationRepositoryInterface::class,
-        TelegramIntegrationRepository::class,
-    );
+            TelegramIntegrationRepositoryInterface::class,
+            TelegramIntegrationRepository::class,
+        );
 
-    $this->app->bind(
-        TelegramNotificationRepositoryInterface::class,
-        TelegramNotificationRepository::class,
-   
-    );
-        
+        $this->app->bind(
+            TelegramNotificationRepositoryInterface::class,
+            TelegramNotificationRepository::class,
+        );
     }
 
     /**

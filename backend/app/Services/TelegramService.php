@@ -7,7 +7,6 @@ use App\DTOs\TelegramConnectData;
 use App\Models\TelegramIntegration;
 use App\Models\TelegramSendLog;
 use App\Repositories\TelegramIntegrationRepositoryInterface;
-use App\Repositories\TelegramRepositorie;
 
 class TelegramService
 {
@@ -17,16 +16,16 @@ class TelegramService
     public function __construct(
         private TelegramIntegrationRepositoryInterface $telegramIntegrations,
         private TelegramClient $telegramClient
-    )
-    {
+    ) {
         //
     }
 
-    public function connect(String $shopId,TelegramConnectData $data): TelegramIntegration {
-      return $this->telegramIntegrations->upsertForShop($shopId, $data->toArray());
+    public function connect(String $shopId, TelegramConnectData $data): TelegramIntegration
+    {
+        return $this->telegramIntegrations->upsertForShop($shopId, $data->toArray());
     }
 
-  
+
 
     public function getStatus(int $shopId): array
     {

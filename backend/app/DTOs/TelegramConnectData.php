@@ -3,6 +3,7 @@
 namespace App\DTOs;
 
 use Spatie\LaravelData\Data;
+
 class TelegramConnectData extends Data
 {
     /**
@@ -12,8 +13,7 @@ class TelegramConnectData extends Data
         public string $botToken,
         public string $chatId,
         public bool $enabled
-    )
-    {
+    ) {
         //
     }
 }
