@@ -11,7 +11,7 @@ const Statuses = ({shopId}: IStatusesProps) => {
         <div>
             <h1>Статусы</h1>
             {isSuccess && <div>
-                <p>enabled: {data?.data?.enabled}</p>
+                <p>enabled: {data?.data?.enabled ? "true" : "false"}</p>
                 <p>chatId: {data?.data?.chatId}</p>
                 <p>lastSentAt: {data?.data?.lastSentAt}</p>
                 <p>sentCount: {data?.data?.sentCount}</p>
