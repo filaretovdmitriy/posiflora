@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\TelegramIntegration;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class TelegramIntegrationSeeder extends Seeder
@@ -13,9 +12,12 @@ class TelegramIntegrationSeeder extends Seeder
      */
     public function run(): void
     {
-        
         TelegramIntegration::factory()
             ->count(20)
             ->create();
+
+        TelegramIntegration::factory()->create([
+            'shop_id' => 123,
+        ]);
     }
 }

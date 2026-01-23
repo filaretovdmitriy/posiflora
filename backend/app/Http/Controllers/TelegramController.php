@@ -6,8 +6,6 @@ use App\DTOs\TelegramConnectData;
 use App\Http\Requests\TelegramRequest;
 use App\Http\Resources\TelegramStatusResource;
 use App\Services\TelegramService;
-use Illuminate\Http\JsonResponse as HttpJsonResponse;
-use Illuminate\Http\Resources\Json\JsonResource;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Throwable;
 
@@ -24,21 +22,19 @@ class TelegramController extends Controller
     }
 
     public function status(int $shopId): JsonResponse
-{
-    try {
-        $status = $this->telegramService->getStatus($shopId);
+    {
+        try {
+            $status = $this->telegramService->getStatus($shopId);
 
-        return response()->json([
-            'data'   => new TelegramStatusResource($status),
-            'result' => 'SUCCESS',
-        ]);
-    } catch (Throwable $e) {
-       
-
-        return response()->json([
-            'data'   => null,
-            'result' => 'ERROR',
-        ], 500);
+            return response()->json([
+                'data'   => new TelegramStatusResource($status),
+                'result' => 'SUCCESS',
+            ]);
+        } catch (Throwable $e) {
+            return response()->json([
+                'data'   => null,
+                'result' => 'ERROR',
+            ], 500);
+        }
     }
-}
 }
