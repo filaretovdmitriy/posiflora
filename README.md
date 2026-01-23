@@ -1,3 +1,7 @@
+# Запуск фронт + бэк
+
+docker compose up -d
+
 # Запуск бэка из консоли
 
 docker compose exec app sh
