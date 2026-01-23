@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Shop;
 use App\Models\TelegramIntegration;
 use Illuminate\Database\Seeder;
 
@@ -16,8 +17,12 @@ class TelegramIntegrationSeeder extends Seeder
             ->count(20)
             ->create();
 
+        $shop = Shop::factory()->create([
+            'name' => 'Shop 123',
+        ]);
+
         TelegramIntegration::factory()->create([
-            'shop_id' => 123,
+            'shop_id' => $shop->id,
         ]);
     }
 }

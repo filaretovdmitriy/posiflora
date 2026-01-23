@@ -14,7 +14,7 @@ docker compose up frontend
 
 php artisan migrate:fresh --seed
 
-http://localhost:5173/shops/123/growth/telegram
+http://localhost:5173/shops/1/growth/telegram
 
 # Запуск тестов
 
