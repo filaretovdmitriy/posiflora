@@ -5,7 +5,7 @@ import axios, {
 
 export interface ISingleResponse<T> {
     success: boolean;
-    result: T;
+    data: T;
 }
 
 export interface IMultipleResponse<T> {

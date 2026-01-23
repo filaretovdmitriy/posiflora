@@ -10,9 +10,17 @@ const Statuses = ({shopId}: IStatusesProps) => {
     return (
         <div>
             <h1>Статусы</h1>
-            {isSuccess && <div>{JSON.stringify(data)}</div>}
+            {isSuccess && <div>
+                <p>enabled: {data?.data?.enabled}</p>
+                <p>chatId: {data?.data?.chatId}</p>
+                <p>lastSentAt: {data?.data?.lastSentAt}</p>
+                <p>sentCount: {data?.data?.sentCount}</p>
+                <p>failedCount: {data?.data?.failedCount}</p>
+                </div>}
         </div>
     )
 }
 
 export default Statuses
+
+

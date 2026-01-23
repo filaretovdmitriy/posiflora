@@ -1,5 +1,4 @@
 import {
-    type IMultipleResponse,
     type ISingleResponse,
     apiInstance,
 } from '../apiInstance';
@@ -29,7 +28,7 @@ interface ITelegramStatusResponse {
 
 export const getTelegramStatusFromServer = (
     {shopId}: ITelegramStatusRequestDto,
-): Promise<ISingleResponse<string>> => {
+): Promise<ISingleResponse<ITelegramStatusResponse>> => {
     return apiInstance.get(`${shopId}/${TELEGRAM_PREFIX}status`);
 };
 
